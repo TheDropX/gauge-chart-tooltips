@@ -23,6 +23,7 @@ jobs:
           node-version: 'lts/*'
           registry-url: 'https://registry.npmjs.org/'
           cache: 'pnpm'
+      - run: npm install -g npm@latest
       - shell: bash
         run: pnpm i
       - name: Build
