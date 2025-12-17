@@ -223,7 +223,7 @@ export function arcOutline(
 
           if (enableTooltips && tooltipLabels[i]) {
             element.removeEventListener('mousemove', mouseMoveFn)
-            element.removeChild(tooltip)
+            tooltip.remove()
           }
         })
     } else {
@@ -233,7 +233,7 @@ export function arcOutline(
             element.addEventListener('mousemove', mouseMoveFn)
           })
           .on('mouseout', () => {
-            element.removeChild(tooltip)
+            tooltip.remove()
             element.removeEventListener('mousemove', mouseMoveFn)
           })
     }
@@ -527,7 +527,7 @@ export function labelOutline(
   element.addEventListener('mouseout', () => {
     if (enableTooltips) {
       element.removeEventListener('mousemove', mouseMoveFn)
-      document.body.removeChild(tooltip)
+      tooltip.remove()
     }
   })
 }

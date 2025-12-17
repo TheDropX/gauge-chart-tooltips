@@ -1,6 +1,6 @@
 {
   "name": "gauge-chart-tooltips",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "**A library for creating nice and flexible gauge charts.**",
   "main": "dist/commonjs-bundle.js",
   "author": "",
