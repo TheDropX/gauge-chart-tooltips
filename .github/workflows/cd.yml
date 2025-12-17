@@ -9,11 +9,8 @@ permissions:
   contents: read
 
 jobs:
-  # tests:
-  #   uses: ./.github/workflows/test.yml
   cd:
     name: CD
-    # needs: tests
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -31,9 +28,5 @@ jobs:
         run: pnpm i
       - name: Build
         run: pnpm -r build
-      # - name: Set auth
-      #   run: pnpm config set //registry.npmjs.org/:_authToken ${{secrets.NPM_TOKEN}}
       - name: Publish
-        # env:
-        # NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: npm publish
